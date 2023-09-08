@@ -6,7 +6,7 @@ public class MathManager {
     private string operation;
     private bool isCursed = false;
 
-    // initialize a reusable string variable as to avoid repition in the switch statement at the end of Main()
+    // initialize a reusable string variable as to avoid repitition in the switch statement at the end of Main()
     string resultText = "The result is: ";
 
     public void Main() {
