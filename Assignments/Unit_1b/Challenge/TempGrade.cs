@@ -6,10 +6,11 @@ public class TempGrade {
 	public ExamGrader examGrader;
 
 	public void Main() {
+		// Instantiate class objects
 		tempAdvisor = new TempAdvisor();
 		examGrader = new ExamGrader();
 
-
+		// call methods from class objects
 		tempAdvisor.Advise();
 		examGrader.Grade();
 		examGrader.GiveSubjectFeedback();
@@ -18,10 +19,14 @@ public class TempGrade {
 public class TempAdvisor {
 	
 	public void Advise() {
+		// ask for input
 		Console.WriteLine("Please input a temperature in Celsius:");
+		// wait and read input
 		string temp = Console.ReadLine();
 
+		// convert string to float
 		float tempF = float.Parse(temp);
+		// respond depending on input
 		if(tempF > 50) {
 			Console.WriteLine("EXTREME DANGER! Please seek a cooler environment!");
 		} else if(tempF > 40) {
@@ -43,11 +48,15 @@ public class TempAdvisor {
 public class ExamGrader {
 	
 	public void Grade() {
+		// ask for input
 		Console.WriteLine("Please enter your grade percentage: ");
+		// wait for and read input
 		string grade = Console.ReadLine();
+		// convert string to float
 		float gradeF = float.Parse(grade);
 
 
+		// respond appropriately
 		if(gradeF >= 90) {
 			Console.WriteLine("You got an A.");
 		} else if(gradeF >= 80) {
@@ -62,11 +71,13 @@ public class ExamGrader {
 	}
 
 	public void GiveSubjectFeedback() {
+		// ask for input
 		Console.WriteLine("Please enter your favorite subject - \nThe options are as follows: \nmath \nhistory \nscience \nenglish");
+		// wait for and read input
 		string subject = Console.ReadLine();
 
 
-
+		// respond appropriately using a switch statement based on input strings
 		switch (subject) {
 			case "math":
 				Console.WriteLine("That's great! Math is a very useful subject. Keep learning!");
